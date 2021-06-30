@@ -1,16 +1,15 @@
 import React from "react";
-import "./App.css";
+import Login from "./feature/Login/Login";
+import List from "./feature/List/List";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <i>White. A blank canvas. So many possibilities...</i>
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Route path="/login" exact component={Login} />
+      <Route exact path="/" component={List} />
+    </Router>
   );
-}
+};
 
 export default App;
